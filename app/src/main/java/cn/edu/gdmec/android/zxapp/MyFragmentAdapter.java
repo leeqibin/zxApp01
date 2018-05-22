@@ -29,12 +29,12 @@ public class MyFragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return null;
+        return fragments.get(position);
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return fragments.size();
     }
 
     @Override

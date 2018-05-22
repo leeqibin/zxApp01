@@ -33,8 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         iv_title_video = (ImageView) findViewById(R.id.iv_title_video);
         vp_content = (ViewPager) findViewById(R.id.vp_content);
         toolbars = (Toolbar) findViewById(R.id.toolbars);
-
-
+        initContentFragment();
         iv_title_movies.setOnClickListener(this);
         iv_title_news.setOnClickListener(this);
         iv_title_video.setOnClickListener(this);
