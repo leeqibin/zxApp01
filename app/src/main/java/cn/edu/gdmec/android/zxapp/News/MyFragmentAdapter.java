@@ -1,4 +1,4 @@
-package cn.edu.gdmec.android.zxapp;
+package cn.edu.gdmec.android.zxapp.News;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

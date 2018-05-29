@@ -11,6 +11,10 @@ import android.os.Bundle;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.edu.gdmec.android.zxapp.News.FgNewsListFragment;
+import cn.edu.gdmec.android.zxapp.News.MyFragmentAdapter;
+import cn.edu.gdmec.android.zxapp.R;
+
 
 public class FgNewsFragment extends Fragment  {
 
@@ -42,9 +46,9 @@ public class FgNewsFragment extends Fragment  {
     }
 
     private void setViewPager() {
-        fragments.add(FgNewsListFragment.newsListFragment(NEW_TYPE_TOP));
-        fragments.add(FgNewsListFragment.newsListFragment(NEW_TYPE_NAB));
-        fragments.add(FgNewsListFragment.newsListFragment(NEW_TYPE_JOKES));
+        fragments.add(FgNewsListFragment.newInstance(NEW_TYPE_TOP));
+        fragments.add(FgNewsListFragment.newInstance(NEW_TYPE_NAB));
+        fragments.add(FgNewsListFragment.newInstance(NEW_TYPE_JOKES));
 
         fragmentTitle.add("头条");
         fragmentTitle.add("NBA");

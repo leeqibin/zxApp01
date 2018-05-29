@@ -1,4 +1,4 @@
-package cn.edu.gdmec.android.zxapp;
+package cn.edu.gdmec.android.zxapp.News;
 
 
 
@@ -16,6 +16,11 @@ import android.widget.ImageView;
 
 import java.util.ArrayList;
 
+import cn.edu.gdmec.android.zxapp.FgNewsFragment;
+import cn.edu.gdmec.android.zxapp.Movie.FgMovieFragment;
+import cn.edu.gdmec.android.zxapp.News.Video.FgVideoFragment;
+import cn.edu.gdmec.android.zxapp.R;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener,ViewPager.OnPageChangeListener{
 
 
@@ -28,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initView(){
         view_status = findViewById(R.id.view_status);
-        iv_title_movies = (ImageView) findViewById(R.id.iv_title_movies);
+        iv_title_movies = (ImageView) findViewById(R.id.iv_title_movie);
         iv_title_news = (ImageView) findViewById(R.id.iv_title_news);
         iv_title_video = (ImageView) findViewById(R.id.iv_title_video);
         vp_content = (ViewPager) findViewById(R.id.vp_content);
@@ -100,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     setCurrentItem(0);
                 }
                 break;
-            case R.id.iv_title_movies:
+            case R.id.iv_title_movie:
                 if (vp_content.getCurrentItem()!=1){
                     setCurrentItem(1);
                 }
