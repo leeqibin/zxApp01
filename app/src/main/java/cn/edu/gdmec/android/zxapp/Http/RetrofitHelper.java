@@ -7,7 +7,9 @@ import cn.edu.gdmec.android.zxapp.Bean.NewsBean;
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+import rx.Observable;
 
 /**
  * Created by apple on 18/5/29.
@@ -25,15 +27,16 @@ public class RetrofitHelper {
                 .baseUrl(host)
                 .client(getOkHttpClient())
                 .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
         retrofitService=retrofit.create(RetrofitService.class);
         retrofitServiceMovies=retrofit.create(RetrofitServiceMovies.class);
     }
-    public Call<NewsBean> getNews(String type, String id, int startPage){
+    public Observable<NewsBean> getNews(String type, String id, int startPage){
         return retrofitService.getNews(type,id,startPage);
     }
-    public Call<MoviesBean> getMovies(String movie, String type){
-        return retrofitServiceMovies.getMovies(movie,type);
+    public Observable<MoviesBean> getMovies(String total){
+        return retrofitService.getMovies(total);
     }
     private OkHttpClient getOkHttpClient(){
         if (okHttpClient==null){

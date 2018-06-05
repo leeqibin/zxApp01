@@ -1,5 +1,6 @@
 package cn.edu.gdmec.android.zxapp.News.Model;
 
+import cn.edu.gdmec.android.zxapp.Bean.MoviesBean;
 import cn.edu.gdmec.android.zxapp.Bean.NewsBean;
 
 /**
